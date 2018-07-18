@@ -2,7 +2,7 @@
 
 ## Description
 
-Create an in-memory image file, in the specified format, from a remote URL.
+Create an in-memory image file, in the specified format, from a remote URL for saving to a django ImageField.
 
 ## Installation
 
@@ -20,6 +20,13 @@ pip install download_image
 ## Usage
 
 ```python
+from django.db import models
 from download_image.utils import download_image_as_gif
-image = download_image_as_gif("https://url.to.file", "optional_file_name.gif")
+
+class ExampleModel(models.Model):
+    picture = models.ImageField(upload_to="/path/to/upload/")
+
+instance = ExampleModel()
+instance.picture = download_image_as_gif("https://url.to.file", "optional_file_name.gif")
+instance.save()
 ```
