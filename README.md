@@ -7,7 +7,7 @@ Create an in-memory image file, in the specified format, from a remote URL for s
 ## Installation
 
 ```python
-pip install download_image
+pip install download-image
 ```
 
 ## Methods
