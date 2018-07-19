@@ -10,6 +10,12 @@ Create an in-memory image file, in the specified format, from a remote URL for s
 pip install download-image
 ```
 
+or
+
+```python
+pipenv install download-image
+```
+
 ## Methods
 
 1. download\_image\_as\_gif(url, file_name)
